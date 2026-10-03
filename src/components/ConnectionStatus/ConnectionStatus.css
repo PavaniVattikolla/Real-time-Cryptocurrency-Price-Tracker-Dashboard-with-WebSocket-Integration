@@ -1,0 +1,58 @@
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.connection-status__dot {
+  font-size: 0.65rem;
+}
+
+.connection-status--connected {
+  color: var(--positive-color);
+  background: rgba(72, 187, 120, 0.1);
+  border-color: rgba(72, 187, 120, 0.2);
+}
+
+.connection-status--disconnected {
+  color: var(--text-muted);
+  background: rgba(113, 128, 150, 0.1);
+  border-color: rgba(113, 128, 150, 0.2);
+}
+
+.connection-status--error {
+  color: var(--negative-color);
+  background: rgba(245, 101, 101, 0.1);
+  border-color: rgba(245, 101, 101, 0.2);
+}
+
+.connection-status--reconnecting {
+  color: #ed8936;
+  background: rgba(237, 137, 54, 0.1);
+  border-color: rgba(237, 137, 54, 0.2);
+  animation: blink 1.5s infinite;
+}
+
+.connection-status--idle {
+  color: var(--text-muted);
+  background: rgba(113, 128, 150, 0.1);
+  border-color: rgba(113, 128, 150, 0.2);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Hide label on very small screens */
+@media (max-width: 400px) {
+  .connection-status__label {
+    display: none;
+  }
+}

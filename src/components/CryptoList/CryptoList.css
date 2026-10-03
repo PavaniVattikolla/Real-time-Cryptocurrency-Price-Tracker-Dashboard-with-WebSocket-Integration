@@ -1,0 +1,36 @@
+.crypto-list {
+  width: 100%;
+}
+
+.crypto-list__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.crypto-list__subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.crypto-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .crypto-list__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .crypto-list__grid {
+    grid-template-columns: 1fr;
+  }
+}
